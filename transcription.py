@@ -29,7 +29,7 @@ rna_transcription_values = {
 #
 # Returns:
 # str: The transcribed RNA sequence.
-def transcription(sequence):
+def dna_transcription(sequence):
 
     return "".join(dna_transcription_values[i] for i in sequence)
 
