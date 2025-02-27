@@ -4,7 +4,7 @@ dna_transcription = {
     "C" : "G",
     "G" : "C"
 }
-reverse_transcription = {
+rna_transcription = {
     "A" : "T",
     "U" : "T",
     "C" : "G",
@@ -20,3 +20,14 @@ def transcription(sequence):
         rna_sequence.append(dna_transcription[i])
 
     return "".join(rna_sequence)
+
+
+
+def reverse_transcription(sequence):
+
+    dna_sequence = []
+
+    for i in sequence:
+        dna_sequence.append(rna_transcription[i])
+
+    return "".join(dna_sequence)
