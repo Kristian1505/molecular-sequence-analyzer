@@ -54,7 +54,6 @@ Result: UAGC
 
 ## ⚠️ Error Handling
 
-- **Invalid Inputs**: Prompts users to enter only valid DNA or RNA sequences (A, T, C, G for DNA; A, U, C, G for RNA).
 - **Invalid Selection**: Displays an error message when an option outside 1-3 is selected.
 
 ## 🤝 Contributing
