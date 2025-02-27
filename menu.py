@@ -4,41 +4,46 @@ from transcription import reverse_transcription
 def display_menu():
 
     print("""
-    -._    _.--'"`'--._    _.--'"`'--._    _.--'"`'--._    _   
-        '-:`.'|`|"':-.  '-:`.'|`|"':-.  '-:`.'|`|"':-.  '.` : '.   
-    '.  '.  | |  | |'.  '.  | |  | |'.  '.  | |  | |'.  '.:   '.  '.
-    : '.  '.| |  | |  '.  '.| |  | |  '.  '.| |  | |  '.  '.  : '.  `.
-    '   '.  `.:_ | :_.' '.  `.:_ | :_.' '.  `.:_ | :_.' '.  `.'   `.
-            `-..,..-'       `-..,..-'       `-..,..-'       `         `
+-._    _.--'"`'--._    _.--'"`'--._    _.--'"`'--._    _   
+    '-:`.'|`|"':-.  '-:`.'|`|"':-.  '-:`.'|`|"':-.  '.` : '.   
+'.  '.  | |  | |'.  '.  | |  | |'.  '.  | |  | |'.  '.:   '.  '.
+: '.  '.| |  | |  '.  '.| |  | |  '.  '.| |  | |  '.  '.  : '.  `.
+'   '.  `.:_ | :_.' '.  `.:_ | :_.' '.  `.:_ | :_.' '.  `.'   `.
+        `-..,..-'       `-..,..-'       `-..,..-'       `         `
         
-    --- DNA/RNA Transcription ---
-    Choose an option:
-          
-    1. Transcribe DNA to RNA
-    2. Reverse Transcribe RNA to DNA
-    3. Exit
-    """)
+--- DNA/RNA Transcription Tool---
+""", end="")
 
     while True:
+        
+        print("""
+Please select an option:
+                
+1. Convert DNA to RNA (Transcription)
+2. Convert RNA to DNA (Reverse Transcription)
+3. Exit
+        """)
+        
         choice = input("Enter your choice (1-3): ")
 
         if choice == "1":
-            print("You chose: Transcribe DNA to RNA")
-            sequence = input("Paste here your DNA sequence: ")
-            sequence = sequence.upper()
+            print("You selected: DNA to RNA Transcription")
+            sequence = input("Enter the DNA sequence for transcription: ").upper()
+            #sequence = sequence.upper()
             print(dna_transcription(sequence))
 
         elif choice == "2":
-            print("You chose: Reverse Transcribe RNA to DNA")
-            sequence = input("Paste here your RNA sequence: ")
-            sequence = sequence.upper()
+            print("You selected: RNA to DNA Reverse Transcription")
+            sequence = input("Enter the RNA sequence for reverse transcription: ").upper()
+            #sequence = sequence.upper()
             print(reverse_transcription(sequence))
 
         elif choice == "3":
-            print("Thank you!")
+            print("Thank you for using the DNA/RNA Transcription Tool.")
             break
         else:
-            print("Wrong option")
+            print("Invalid selection. Please enter 1, 2, or 3.")
         
-        if input("If you want to try another strand press 1: ") != "1":
+        if input("Press 1 to process another sequence or any other key to exit: ") != "1":
+            print("Thank you for using the DNA/RNA Transcription Tool.")
             break

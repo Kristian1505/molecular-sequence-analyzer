@@ -1,4 +1,3 @@
-from transcription import dna_transcription
-from transcription import reverse_transcription
+from menu import display_menu
 
-sequence = input("Add your sequence: ")
+display_menu()
